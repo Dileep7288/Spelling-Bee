@@ -1,0 +1,617 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		805D1E4C2D7EF07E00372AA1 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 805D1E4B2D7EF07E00372AA1 /* Poppins-Regular.ttf */; };
+		80D4F5F82D7EB52500A34517 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80D4F5F72D7EB52500A34517 /* Poppins-Light.ttf */; };
+		80D4F5FA2D7EB73000A34517 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80D4F5F92D7EB73000A34517 /* Poppins-Bold.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		808FA7B82D7845B900E472E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 808FA7992D7845B900E472E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 808FA7A02D7845B900E472E8;
+			remoteInfo = SpellBee;
+		};
+		808FA7C22D7845B900E472E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 808FA7992D7845B900E472E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 808FA7A02D7845B900E472E8;
+			remoteInfo = SpellBee;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		805D1E4B2D7EF07E00372AA1 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		808FA7A12D7845B900E472E8 /* SpellBee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpellBee.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		808FA7B72D7845B900E472E8 /* SpellBeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpellBeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		808FA7C12D7845B900E472E8 /* SpellBeeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpellBeeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		80D4F5F72D7EB52500A34517 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		80D4F5F92D7EB73000A34517 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		808FA7C92D7845B900E472E8 /* Exceptions for "SpellBee" folder in "SpellBee" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 808FA7A02D7845B900E472E8 /* SpellBee */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		808FA7A32D7845B900E472E8 /* SpellBee */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				808FA7C92D7845B900E472E8 /* Exceptions for "SpellBee" folder in "SpellBee" target */,
+			);
+			path = SpellBee;
+			sourceTree = "<group>";
+		};
+		808FA7BA2D7845B900E472E8 /* SpellBeeTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SpellBeeTests;
+			sourceTree = "<group>";
+		};
+		808FA7C42D7845B900E472E8 /* SpellBeeUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SpellBeeUITests;
+			sourceTree = "<group>";
+		};
+		808FA8332D784C6200E472E8 /* Views */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		808FA8342D784C6E00E472E8 /* Controllers */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		808FA8352D784C8000E472E8 /* Models */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		808FA8362D784C8D00E472E8 /* Constants */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Constants;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		808FA79E2D7845B900E472E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		808FA7B42D7845B900E472E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		808FA7BE2D7845B900E472E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		808FA7982D7845B900E472E8 = {
+			isa = PBXGroup;
+			children = (
+				808FA8362D784C8D00E472E8 /* Constants */,
+				808FA8352D784C8000E472E8 /* Models */,
+				808FA8342D784C6E00E472E8 /* Controllers */,
+				808FA8332D784C6200E472E8 /* Views */,
+				808FA7A32D7845B900E472E8 /* SpellBee */,
+				808FA7BA2D7845B900E472E8 /* SpellBeeTests */,
+				808FA7C42D7845B900E472E8 /* SpellBeeUITests */,
+				808FA7A22D7845B900E472E8 /* Products */,
+				80D4F5F72D7EB52500A34517 /* Poppins-Light.ttf */,
+				80D4F5F92D7EB73000A34517 /* Poppins-Bold.ttf */,
+				805D1E4B2D7EF07E00372AA1 /* Poppins-Regular.ttf */,
+			);
+			sourceTree = "<group>";
+		};
+		808FA7A22D7845B900E472E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				808FA7A12D7845B900E472E8 /* SpellBee.app */,
+				808FA7B72D7845B900E472E8 /* SpellBeeTests.xctest */,
+				808FA7C12D7845B900E472E8 /* SpellBeeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		808FA7A02D7845B900E472E8 /* SpellBee */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 808FA7CA2D7845B900E472E8 /* Build configuration list for PBXNativeTarget "SpellBee" */;
+			buildPhases = (
+				808FA79D2D7845B900E472E8 /* Sources */,
+				808FA79E2D7845B900E472E8 /* Frameworks */,
+				808FA79F2D7845B900E472E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				808FA7A32D7845B900E472E8 /* SpellBee */,
+				808FA8332D784C6200E472E8 /* Views */,
+				808FA8342D784C6E00E472E8 /* Controllers */,
+				808FA8352D784C8000E472E8 /* Models */,
+				808FA8362D784C8D00E472E8 /* Constants */,
+			);
+			name = SpellBee;
+			packageProductDependencies = (
+			);
+			productName = SpellBee;
+			productReference = 808FA7A12D7845B900E472E8 /* SpellBee.app */;
+			productType = "com.apple.product-type.application";
+		};
+		808FA7B62D7845B900E472E8 /* SpellBeeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 808FA7CF2D7845B900E472E8 /* Build configuration list for PBXNativeTarget "SpellBeeTests" */;
+			buildPhases = (
+				808FA7B32D7845B900E472E8 /* Sources */,
+				808FA7B42D7845B900E472E8 /* Frameworks */,
+				808FA7B52D7845B900E472E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				808FA7B92D7845B900E472E8 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				808FA7BA2D7845B900E472E8 /* SpellBeeTests */,
+			);
+			name = SpellBeeTests;
+			packageProductDependencies = (
+			);
+			productName = SpellBeeTests;
+			productReference = 808FA7B72D7845B900E472E8 /* SpellBeeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		808FA7C02D7845B900E472E8 /* SpellBeeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 808FA7D22D7845B900E472E8 /* Build configuration list for PBXNativeTarget "SpellBeeUITests" */;
+			buildPhases = (
+				808FA7BD2D7845B900E472E8 /* Sources */,
+				808FA7BE2D7845B900E472E8 /* Frameworks */,
+				808FA7BF2D7845B900E472E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				808FA7C32D7845B900E472E8 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				808FA7C42D7845B900E472E8 /* SpellBeeUITests */,
+			);
+			name = SpellBeeUITests;
+			packageProductDependencies = (
+			);
+			productName = SpellBeeUITests;
+			productReference = 808FA7C12D7845B900E472E8 /* SpellBeeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		808FA7992D7845B900E472E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					808FA7A02D7845B900E472E8 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					808FA7B62D7845B900E472E8 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 808FA7A02D7845B900E472E8;
+					};
+					808FA7C02D7845B900E472E8 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 808FA7A02D7845B900E472E8;
+					};
+				};
+			};
+			buildConfigurationList = 808FA79C2D7845B900E472E8 /* Build configuration list for PBXProject "SpellBee" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 808FA7982D7845B900E472E8;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 808FA7A22D7845B900E472E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				808FA7A02D7845B900E472E8 /* SpellBee */,
+				808FA7B62D7845B900E472E8 /* SpellBeeTests */,
+				808FA7C02D7845B900E472E8 /* SpellBeeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		808FA79F2D7845B900E472E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80D4F5FA2D7EB73000A34517 /* Poppins-Bold.ttf in Resources */,
+				805D1E4C2D7EF07E00372AA1 /* Poppins-Regular.ttf in Resources */,
+				80D4F5F82D7EB52500A34517 /* Poppins-Light.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		808FA7B52D7845B900E472E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		808FA7BF2D7845B900E472E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		808FA79D2D7845B900E472E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		808FA7B32D7845B900E472E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		808FA7BD2D7845B900E472E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		808FA7B92D7845B900E472E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 808FA7A02D7845B900E472E8 /* SpellBee */;
+			targetProxy = 808FA7B82D7845B900E472E8 /* PBXContainerItemProxy */;
+		};
+		808FA7C32D7845B900E472E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 808FA7A02D7845B900E472E8 /* SpellBee */;
+			targetProxy = 808FA7C22D7845B900E472E8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		808FA7CB2D7845B900E472E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V3SXH4HFW9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SpellBee/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cykul.SpellBee;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		808FA7CC2D7845B900E472E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V3SXH4HFW9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SpellBee/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cykul.SpellBee;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		808FA7CD2D7845B900E472E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		808FA7CE2D7845B900E472E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		808FA7D02D7845B900E472E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3878Z32K5L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dileep.SpellBeeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpellBee.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SpellBee";
+			};
+			name = Debug;
+		};
+		808FA7D12D7845B900E472E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3878Z32K5L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dileep.SpellBeeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpellBee.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SpellBee";
+			};
+			name = Release;
+		};
+		808FA7D32D7845B900E472E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3878Z32K5L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dileep.SpellBeeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SpellBee;
+			};
+			name = Debug;
+		};
+		808FA7D42D7845B900E472E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3878Z32K5L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dileep.SpellBeeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SpellBee;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		808FA79C2D7845B900E472E8 /* Build configuration list for PBXProject "SpellBee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				808FA7CD2D7845B900E472E8 /* Debug */,
+				808FA7CE2D7845B900E472E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		808FA7CA2D7845B900E472E8 /* Build configuration list for PBXNativeTarget "SpellBee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				808FA7CB2D7845B900E472E8 /* Debug */,
+				808FA7CC2D7845B900E472E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		808FA7CF2D7845B900E472E8 /* Build configuration list for PBXNativeTarget "SpellBeeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				808FA7D02D7845B900E472E8 /* Debug */,
+				808FA7D12D7845B900E472E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		808FA7D22D7845B900E472E8 /* Build configuration list for PBXNativeTarget "SpellBeeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				808FA7D32D7845B900E472E8 /* Debug */,
+				808FA7D42D7845B900E472E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 808FA7992D7845B900E472E8 /* Project object */;
+}
