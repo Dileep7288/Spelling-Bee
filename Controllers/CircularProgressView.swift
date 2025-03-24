@@ -5,7 +5,7 @@ class CircularProgressView: UIView {
     private let backgroundLayer = CAShapeLayer()
     private let percentageLabel = UILabel()
 
-    var maxScore: CGFloat = 100 {  // ✅ Now dynamically settable
+    var maxScore: CGFloat = 100 { 
         didSet {
             updateProgressBar()
         }
@@ -13,14 +13,14 @@ class CircularProgressView: UIView {
 
     var progress: CGFloat = 0 {
         didSet {
-            let adjustedProgress = min(progress / maxScore, 1.0)  // ✅ Scales dynamically
+            let adjustedProgress = min(progress / maxScore, 1.0)
             updateProgress(adjustedProgress)
         }
     }
     
-    var totalWords: Int = 1 {  // ✅ Default to 1 to prevent division by zero
+    var totalWords: Int = 1 {
         didSet {
-            updateProgressBar()  // ✅ Update progress when totalWords changes
+            updateProgressBar()
         }
     }
 
@@ -39,7 +39,7 @@ class CircularProgressView: UIView {
         layer.sublayers?.forEach { $0.removeFromSuperlayer() }
 
         percentageLabel.textAlignment = .center
-        percentageLabel.font = UIFont.boldSystemFont(ofSize: 16)
+        percentageLabel.font = UIFont(name: "Poppins-Bold", size: 16)
         percentageLabel.textColor = .black
         percentageLabel.text = "0"
         addSubview(percentageLabel)

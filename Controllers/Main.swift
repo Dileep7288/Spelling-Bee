@@ -153,7 +153,6 @@ class Main: UIViewController {
     }
     
     @objc private func leaderBoardTapped(){
-        print("leader board tapped")
         let tips = Tips()
         navigationController?.pushViewController(tips, animated: true)
     }

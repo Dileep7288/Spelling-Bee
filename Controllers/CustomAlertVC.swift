@@ -2,7 +2,6 @@ import UIKit
 
 class CustomAlertVC: UIView {
 
-    // Callbacks for button actions
     var onCancelTapped: (() -> Void)?
     var onYesTapped: (() -> Void)?
 
@@ -11,9 +10,9 @@ class CustomAlertVC: UIView {
 
     private let yesButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Yes (5)", for: .normal)  // ✅ Initial title with timer
+        button.setTitle("Yes (5)", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = UIColor.systemRed
+        button.backgroundColor = UIColor(red: 245/255, green: 158/255, blue: 11/255, alpha: 1.0)
         button.layer.cornerRadius = 8
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -142,7 +141,7 @@ class CustomAlertVC: UIView {
     }
 
     @objc private func cancelTapped() {
-        countdownTimer?.invalidate()  // ✅ Stop timer when Cancel is tapped
+        countdownTimer?.invalidate()
         countdownTimer = nil
 
         UIView.animate(withDuration: 0.2, animations: {

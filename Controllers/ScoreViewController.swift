@@ -230,7 +230,7 @@ class ScoreViewController: UIViewController {
         if isPracticeMode {
             buttonConstraints.append(contentsOf: [
                 practiceAgainButton.centerXAnchor.constraint(equalTo: overLayView.centerXAnchor),
-                practiceAgainButton.topAnchor.constraint(equalTo: gridStackView.bottomAnchor, constant: 20),
+                practiceAgainButton.topAnchor.constraint(equalTo: gridStackView.bottomAnchor, constant: 35),
                 practiceAgainButton.widthAnchor.constraint(equalTo: overLayView.widthAnchor, multiplier: 0.8),
                 practiceAgainButton.heightAnchor.constraint(equalToConstant: 50),
                 
