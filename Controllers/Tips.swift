@@ -8,9 +8,9 @@ class Tips: UIViewController, UICollectionViewDataSource, UICollectionViewDelega
         Instruction(
             title: "Game Objective",
             points: [
-                (UIImage(named: "1")!, "Spell the word correctly."),
-                (UIImage(named: "2")!, "Limited time per word"),
-                (UIImage(named: "3")!, "Listen to the word and type it")
+                (UIImage(named: "1")!, "Hear a word "),
+                (UIImage(named: "2")!, "Spell the word correctly by typing it"),
+                (UIImage(named: "3")!, "Complete as many words as possible within the given time")
             ]
         ),
         Instruction(
@@ -83,8 +83,7 @@ class Tips: UIViewController, UICollectionViewDataSource, UICollectionViewDelega
         headerStack.spacing = 10
         headerStack.translatesAutoresizingMaskIntoConstraints = false
         headerView.addSubview(headerStack)
-        
-        // ✅ Set UICollectionView to Scroll Full Screen
+
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 10
@@ -119,12 +118,11 @@ class Tips: UIViewController, UICollectionViewDataSource, UICollectionViewDelega
             
             titleLabel.centerYAnchor.constraint(equalTo: headerStack.centerYAnchor),
             titleLabel.trailingAnchor.constraint(lessThanOrEqualTo: headerStack.trailingAnchor),
-            
-            // ✅ Full Screen Scrolling
+   
             collectionView.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 10),
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor) // ✅ Extends to bottom
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
 

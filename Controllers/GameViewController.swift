@@ -31,6 +31,7 @@ class GameViewController: UIViewController,UITextFieldDelegate {
     private var wrongWords: Int = 0
     private var submitDate: String?
     var isTimerPaused: Bool = false
+    private var hasHintBeenUsed = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -415,6 +416,7 @@ class GameViewController: UIViewController,UITextFieldDelegate {
             currentIndex += 1
             updateCurrentWord()
             updateProgress()
+            hasHintBeenUsed = false
             resetTimer()
             startTimer()
         } else {
@@ -427,7 +429,7 @@ class GameViewController: UIViewController,UITextFieldDelegate {
         isNavigatingToScore = true
 
         let totalTimeTaken = gameStartTime != nil ? Int(Date().timeIntervalSince(gameStartTime!)) : 0
-
+	
         DispatchQueue.main.async {
             self.inputTextField.resignFirstResponder()
             self.view.endEditing(true)
@@ -492,8 +494,23 @@ class GameViewController: UIViewController,UITextFieldDelegate {
     }
     
     @objc private func hintButtonTapped() {
-        hintCount += 1
-        speakText(currentHint)
+        if !hasHintBeenUsed {
+            hasHintBeenUsed = true
+            hintCount += 1
+            speakText(currentHint)
+        } else {
+            let alert = UIAlertController(
+                title: "Hint Limit Reached",
+                message: "You can only use the hint once per word.",
+                preferredStyle: .alert
+            )
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            present(alert, animated: true)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                alert.dismiss(animated: true)
+            }
+        }
     }
     
     private func speakText(_ text: String) {
@@ -512,7 +529,6 @@ class GameViewController: UIViewController,UITextFieldDelegate {
         inputTextField.resignFirstResponder()
         guard let userInput = inputTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
               !userInput.isEmpty else {
-            //showCustomAlert(title: "Error", message: "Please enter a word.")
             return
         }
         
@@ -530,7 +546,7 @@ class GameViewController: UIViewController,UITextFieldDelegate {
             updateScoreLabel()
         } else {
             wrongWords += 1
-            message = "Oops! The correct spelling is '\(currentWord)'."
+            message = "Oops! The correct spelling is \n\(currentWord)"
         }
         showCustomAlert(title: title, message: message)
     }
@@ -545,14 +561,12 @@ class GameViewController: UIViewController,UITextFieldDelegate {
         if isAlertVisible { return }
         isAlertVisible = true
 
-        // Create background view to block touches outside the alert
         let backgroundView = UIView(frame: view.bounds)
-        backgroundView.backgroundColor = UIColor.black.withAlphaComponent(0.5) // Dimmed background
+        backgroundView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         backgroundView.translatesAutoresizingMaskIntoConstraints = false
 
-        // Override touch handling to block taps outside the alert
         backgroundView.isUserInteractionEnabled = true
-        backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: nil)) // Absorb taps
+        backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: nil))
 
         self.alertBackgroundView = backgroundView
         view.addSubview(backgroundView)

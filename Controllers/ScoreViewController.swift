@@ -31,7 +31,7 @@ class ScoreViewController: UIViewController {
         let trophySize = screenWidth * 0.20
 
         let trophyImageView = UIImageView()
-        trophyImageView.image = UIImage(systemName: "trophy.fill")
+        trophyImageView.image = UIImage(named: "trophy")
         trophyImageView.tintColor = UIColor(red: 212/255.0, green: 175/255.0, blue: 55/255.0, alpha: 1.0)
         trophyImageView.contentMode = .scaleAspectFit
         trophyImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -127,14 +127,15 @@ class ScoreViewController: UIViewController {
         gridStackView.translatesAutoresizingMaskIntoConstraints = false
         overLayView.addSubview(gridStackView)
         
-        let boxContents: [(String, String, String, UIColor, UIColor)] = [
-            ("list.bullet", "Total Words", "\(totalWords)", UIColor(red: 255/255, green: 251/255, blue: 235/255, alpha: 1.0), .blue),
-            ("checkmark.circle.fill", "Correct", "\(correctWordsCount)", UIColor(red: 236/255, green: 253/255, blue: 245/255, alpha: 1.0), .green),
-            ("xmark.circle.fill", "Wrong", "\(wrongWordsCount)", UIColor(red: 254/255, green: 242/255, blue: 242/255, alpha: 1.0), .red),
-            ("clock", "Time Taken", "\(totalTimeTaken)s", UIColor(red: 239/255, green: 246/255, blue: 255/255, alpha: 1.0), .black),
-            ("star.fill", "Score", "\(min(100, max(0, totalScore)))", UIColor(red: 245/255, green: 243/255, blue: 255/255, alpha: 1.0), .yellow),
-            ("lightbulb.fill", "Hints Used", "\(hintCount)", UIColor(red: 255/255, green: 247/255, blue: 237/255, alpha: 1.0), .orange)
+        let boxContents: [(UIImage?, String, String, UIColor, UIColor)] = [
+            (UIImage(systemName: "list.bullet"), "Total Words", "\(totalWords)", UIColor(red: 255/255, green: 251/255, blue: 235/255, alpha: 1.0), .blue),
+            (UIImage(systemName: "checkmark.circle.fill"), "Correct", "\(correctWordsCount)", UIColor(red: 236/255, green: 253/255, blue: 245/255, alpha: 1.0), .green),
+            (UIImage(systemName: "xmark.circle.fill"), "Wrong", "\(wrongWordsCount)", UIColor(red: 254/255, green: 242/255, blue: 242/255, alpha: 1.0), .red),
+            (UIImage(systemName: "clock"), "Time Taken", "\(totalTimeTaken)s", UIColor(red: 239/255, green: 246/255, blue: 255/255, alpha: 1.0), .black),
+            (UIImage(systemName: "star.fill"), "Score", "\(min(100, max(0, totalScore)))", UIColor(red: 245/255, green: 243/255, blue: 255/255, alpha: 1.0), .yellow),
+            (UIImage(named: "7"), "Hints Used", "\(hintCount)", UIColor(red: 255/255, green: 247/255, blue: 237/255, alpha: 1.0), .orange) 
         ]
+
 
         for i in 0..<3 {
             let rowStackView = UIStackView()
@@ -148,8 +149,8 @@ class ScoreViewController: UIViewController {
             for j in 0..<2 {
                 let index = i * 2 + j
                 if index < boxContents.count {
-                    let (imageName, title, value, bgColor, iconColor) = boxContents[index]
-                    let box = createBox(imageName: imageName, title: title, value: value, backgroundColor: bgColor, imageColor: iconColor)
+                    let (image, title, value, bgColor, iconColor) = boxContents[index]
+                    let box = createBox(image: image, title: title, value: value, backgroundColor: bgColor, imageColor: iconColor)
                     rowStackView.addArrangedSubview(box)
                 }
             }
@@ -161,7 +162,7 @@ class ScoreViewController: UIViewController {
         playAgainButton.tintColor = .white
         playAgainButton.setTitle(" Play Again", for: .normal)
         playAgainButton.setTitleColor(.white, for: .normal)
-        playAgainButton.titleLabel?.font = UIFont(name: "Poppins-Bold", size: 18)
+        playAgainButton.titleLabel?.font = UIFont(name: "Poppins-Bold", size: screenWidth * 0.045)
         playAgainButton.backgroundColor = UIColor(red: 1.0, green: 0.65, blue: 0.0, alpha: 1.0)
         playAgainButton.layer.cornerRadius = 10
         playAgainButton.translatesAutoresizingMaskIntoConstraints = false
@@ -173,7 +174,7 @@ class ScoreViewController: UIViewController {
         let exitButton = UIButton(type: .system)
         exitButton.setTitle("Exit", for: .normal)
         exitButton.setTitleColor(.white, for: .normal)
-        exitButton.titleLabel?.font = UIFont(name: "Poppins-Bold", size: 18)
+        exitButton.titleLabel?.font = UIFont(name: "Poppins-Bold", size: screenWidth * 0.045)
         exitButton.backgroundColor = UIColor(red: 1.0, green: 0.65, blue: 0.0, alpha: 1.0)
         exitButton.layer.cornerRadius = 10
         exitButton.translatesAutoresizingMaskIntoConstraints = false
@@ -185,7 +186,7 @@ class ScoreViewController: UIViewController {
         practiceAgainButton.tintColor = .white
         practiceAgainButton.setTitle(" Practice Again", for: .normal)
         practiceAgainButton.setTitleColor(.white, for: .normal)
-        practiceAgainButton.titleLabel?.font = UIFont(name: "Poppins-Bold", size: 18)
+        practiceAgainButton.titleLabel?.font = UIFont(name: "Poppins-Bold", size: screenWidth * 0.045)
         practiceAgainButton.backgroundColor = UIColor(red: 1.0, green: 0.65, blue: 0.0, alpha: 1.0)
         practiceAgainButton.layer.cornerRadius = 10
         practiceAgainButton.translatesAutoresizingMaskIntoConstraints = false
@@ -232,31 +233,31 @@ class ScoreViewController: UIViewController {
                 practiceAgainButton.centerXAnchor.constraint(equalTo: overLayView.centerXAnchor),
                 practiceAgainButton.topAnchor.constraint(equalTo: gridStackView.bottomAnchor, constant: 35),
                 practiceAgainButton.widthAnchor.constraint(equalTo: overLayView.widthAnchor, multiplier: 0.8),
-                practiceAgainButton.heightAnchor.constraint(equalToConstant: 50),
+                practiceAgainButton.heightAnchor.constraint(equalToConstant: screenHeight * 0.06),
                 
                 exitButton.centerXAnchor.constraint(equalTo: overLayView.centerXAnchor),
                 exitButton.topAnchor.constraint(equalTo: practiceAgainButton.bottomAnchor, constant: 20),
                 exitButton.widthAnchor.constraint(equalTo: overLayView.widthAnchor, multiplier: 0.8),
-                exitButton.heightAnchor.constraint(equalToConstant: 50)
+                exitButton.heightAnchor.constraint(equalToConstant: screenHeight * 0.06)
             ])
         } else {
             buttonConstraints.append(contentsOf: [
                 playAgainButton.centerXAnchor.constraint(equalTo: overLayView.centerXAnchor),
                 playAgainButton.topAnchor.constraint(equalTo: gridStackView.bottomAnchor, constant: 20),
                 playAgainButton.widthAnchor.constraint(equalTo: overLayView.widthAnchor, multiplier: 0.8),
-                playAgainButton.heightAnchor.constraint(equalToConstant: 50),
+                playAgainButton.heightAnchor.constraint(equalToConstant: screenHeight * 0.06),
                 
                 exitButton.centerXAnchor.constraint(equalTo: overLayView.centerXAnchor),
                 exitButton.topAnchor.constraint(equalTo: playAgainButton.bottomAnchor, constant: 20),
                 exitButton.widthAnchor.constraint(equalTo: overLayView.widthAnchor, multiplier: 0.8),
-                exitButton.heightAnchor.constraint(equalToConstant: 50)
+                exitButton.heightAnchor.constraint(equalToConstant: screenHeight * 0.06)
             ])
         }
 
         NSLayoutConstraint.activate(buttonConstraints)
     }
     
-    private func createBox(imageName: String?, title: String, value: String, backgroundColor: UIColor, imageColor: UIColor) -> UIView {
+    private func createBox(image: UIImage?, title: String, value: String, backgroundColor: UIColor, imageColor: UIColor) -> UIView {
         let boxView = UIView()
         boxView.backgroundColor = backgroundColor
         boxView.layer.cornerRadius = 10
@@ -290,7 +291,8 @@ class ScoreViewController: UIViewController {
             ])
         } else {
             let imageView = UIImageView()
-            imageView.image = UIImage(systemName: imageName ?? "")?.withRenderingMode(.alwaysTemplate)
+  
+            imageView.image = image
             imageView.tintColor = imageColor
             imageView.contentMode = .scaleAspectFit
             imageView.translatesAutoresizingMaskIntoConstraints = false

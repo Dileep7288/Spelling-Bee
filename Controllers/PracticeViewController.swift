@@ -59,7 +59,7 @@ class PracticeViewController: UIViewController,UITextFieldDelegate {
 
         let customAlert = CustomAlertView(
             title: "How to Play?",
-            message: "Click the Mic icon or the 'Hear It' button to listen to the word. Once you hear it, type the word into the input box below. Good luck!",
+            message: "Click the Speaker icon to listen to the word. Once you hear it, type the word into the input box below. Good luck!",
             buttonTitle: "PROCEED"
         )
 
@@ -372,7 +372,7 @@ class PracticeViewController: UIViewController,UITextFieldDelegate {
             updateScoreLabel()
         } else {
             wrongWords += 1
-            message = "Oops! The correct spelling is '\(currentWord)'."
+            message = "Oops! The correct spelling is \n\(currentWord)"
         }
         showCustomAlert(title: title, message: message)
     }

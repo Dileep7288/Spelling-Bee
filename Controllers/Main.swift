@@ -27,7 +27,6 @@ class Main: UIViewController {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Spelling Bee"
-        label.font = UIFont(name: "Poppins-Bold", size: 30)
         label.textColor = UIColor(red: 212/255.0, green: 175/255.0, blue: 55/255.0, alpha: 1.0)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -37,7 +36,6 @@ class Main: UIViewController {
     private let subtitleLabel: UILabel = {
         let label = UILabel()
         label.text = "''Master the Words, Conquer the \nChallenge!''"
-        label.font = UIFont(name: "Poppins-Light", size: 18)
         label.textColor = .white
         label.textAlignment = .center
         label.numberOfLines = 2
@@ -49,7 +47,6 @@ class Main: UIViewController {
     private let playButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Start Game", for: .normal)
-        button.titleLabel?.font = UIFont(name: "Poppins-Bold", size: 16)
         button.setTitleColor(.black, for: .normal)
         button.backgroundColor = UIColor(red: 212/255.0, green: 175/255.0, blue: 55/255.0, alpha: 1.0)
         button.layer.cornerRadius = 12
@@ -60,7 +57,6 @@ class Main: UIViewController {
     private let practiceModeButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Practice Mode", for: .normal)
-        button.titleLabel?.font = UIFont(name: "Poppins-Bold", size: 16)
         button.setTitleColor(UIColor(red: 212/255.0, green: 175/255.0, blue: 55/255.0, alpha: 1.0), for: .normal)
         button.layer.cornerRadius = 12
         button.layer.borderColor = UIColor(red: 212/255.0, green: 175/255.0, blue: 55/255.0, alpha: 1.0).cgColor
@@ -70,11 +66,9 @@ class Main: UIViewController {
         return button
     }()
 
-    
     private let leaderBoardButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("How To Play", for: .normal)
-        button.titleLabel?.font = UIFont(name: "Poppins-Bold", size: 16)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = UIColor(red: 44/255.0, green: 62/255.0, blue: 80/255.0, alpha: 1.0)
         button.layer.cornerRadius = 12
@@ -84,6 +78,12 @@ class Main: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let screenWidth = UIScreen.main.bounds.width
+        titleLabel.font = UIFont(name: "Poppins-Bold", size: screenWidth * 0.09)
+        subtitleLabel.font = UIFont(name: "Poppins-Light", size: screenWidth * 0.045)
+        playButton.titleLabel?.font = UIFont(name: "Poppins-Bold", size: screenWidth * 0.04)
+        practiceModeButton.titleLabel?.font = UIFont(name: "Poppins-Bold", size: screenWidth * 0.04)
+        leaderBoardButton.titleLabel?.font = UIFont(name: "Poppins-Bold", size: screenWidth * 0.04)
         setupUI()
         playButton.addTarget(self, action: #selector(playButtonTapped), for: .touchUpInside )
         practiceModeButton.addTarget(self, action: #selector(practiceButtonTapped), for: .touchUpInside )
