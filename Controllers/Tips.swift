@@ -9,7 +9,7 @@ class Tips: UIViewController, UICollectionViewDataSource, UICollectionViewDelega
             title: "Game Objective",
             points: [
                 (UIImage(named: "1")!, "Spell the word correctly."),
-                (UIImage(named: "2")!, "15 seconds per word"),
+                (UIImage(named: "2")!, "Limited time per word"),
                 (UIImage(named: "3")!, "Listen to the word and type it")
             ]
         ),
