@@ -111,20 +111,20 @@ class Main: UIViewController {
             overlayView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             overlayView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            centerImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 70),
+            centerImageView.bottomAnchor.constraint(equalTo: titleLabel.topAnchor, constant: -25),
             centerImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             centerImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             centerImageView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.07),
 
-            titleLabel.topAnchor.constraint(equalTo: centerImageView.bottomAnchor, constant: 20),
+            titleLabel.bottomAnchor.constraint(equalTo: subtitleLabel.topAnchor, constant: -20),
             titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             
-            subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
+            subtitleLabel.bottomAnchor.constraint(equalTo: playButton.topAnchor, constant: -40),
             subtitleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             subtitleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
 
-            playButton.topAnchor.constraint(equalTo: subtitleLabel.bottomAnchor, constant: 40),
+            playButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             playButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             playButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
             playButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.06),

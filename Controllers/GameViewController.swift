@@ -529,6 +529,17 @@ class GameViewController: UIViewController,UITextFieldDelegate {
         inputTextField.resignFirstResponder()
         guard let userInput = inputTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
               !userInput.isEmpty else {
+            let alert = UIAlertController(
+                title: "Enter a word",
+                message: "You must enter a correct word to get score points.",
+                preferredStyle: .alert
+            )
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            present(alert, animated: true)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                alert.dismiss(animated: true)
+            }
             return
         }
         
