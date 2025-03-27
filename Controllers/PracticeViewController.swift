@@ -30,6 +30,8 @@ class PracticeViewController: UIViewController,UITextFieldDelegate {
     private var submitDate: String?
     private var currentHint = ""
     private var hintCount: Int = 0
+    var incorrectWords:[String] = []
+    var incorrectWordsHint:[String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -194,39 +196,53 @@ class PracticeViewController: UIViewController,UITextFieldDelegate {
     
     // MARK: - API Call
     private func fetchSpellBeeData() {
-        let urlString = APIConstants.practiceApi
-         guard let url = URL(string: urlString) else {
-             print("❌ Invalid URL")
-             return
-         }
+        if !incorrectWords.isEmpty {
+            words = incorrectWords
+            sentences = incorrectWordsHint
+            submitDate = getCurrentDate()
+    
+            if !words.isEmpty {
+                updateCurrentWord()
+                updateProgress()
+            } else {
+                print("⚠️ No words to practice.")
+            }
+        } else {
+            let urlString = APIConstants.practiceApi
+            guard let url = URL(string: urlString) else {
+                print("❌ Invalid URL")
+                return
+            }
 
-         let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
-             guard let self = self, let data = data, error == nil else {
-                 print("❌ Error fetching data: \(error?.localizedDescription ?? "Unknown error")")
-                 return
-             }
+            let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
+                guard let self = self, let data = data, error == nil else {
+                    print("❌ Error fetching data: \(error?.localizedDescription ?? "Unknown error")")
+                    return
+                }
 
-             do {
-                 let words = try JSONDecoder().decode([String].self, from: data)
-                 
-                 DispatchQueue.main.async {
-                     self.words = words
-                     self.submitDate = self.getCurrentDate()
+                do {
+                    let words = try JSONDecoder().decode([String].self, from: data)
 
-                     if !self.words.isEmpty {
-                         self.updateCurrentWord()
-                         self.updateProgress()
-                     } else {
-                         print("⚠️ No words found in API response.")
-                     }
-                 }
-             } catch {
-                 print("❌ Error decoding JSON: \(error.localizedDescription)")
-             }
-         }
+                    DispatchQueue.main.async {
+                        self.words = words
+                        self.submitDate = self.getCurrentDate()
+                        self.currentIndex = 0
+               
 
-         task.resume()
-     }
+                        if !self.words.isEmpty {
+                            self.updateCurrentWord()
+                            self.updateProgress()
+                        } else {
+                            print("⚠️ No words found in API response.")
+                        }
+                    }
+                } catch {
+                    print("❌ Error decoding JSON: \(error.localizedDescription)")
+                }
+            }
+            task.resume()
+        }
+    }
 
      private func getCurrentDate() -> String {
          let dateFormatter = DateFormatter()
@@ -551,6 +567,11 @@ class PracticeViewController: UIViewController,UITextFieldDelegate {
     private func updateCurrentWord() {
         guard currentIndex < words.count else { return }
         currentWord = words[currentIndex]
+        if currentIndex < sentences.count {
+            currentHint = sentences[currentIndex]
+        } else {
+            currentHint = "No hint available."
+        }
         timerStarted = false
     }
     
@@ -750,5 +771,6 @@ class PracticeViewController: UIViewController,UITextFieldDelegate {
     @objc private func hintButtonTapped() {
         hintCount += 1
         speakText(currentHint)
+        print(currentHint)
     }
 }

@@ -9,10 +9,40 @@ class ScoreViewController: UIViewController {
     var wrongWordsCount: Int = 0
     var totalWords: Int = 0
     var isPracticeMode: Bool = false
+    var incorrectWords: [String] = []
+    var incorrectWordsHint: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        showWrongWordsPopup()
+    }
+
+    private func showWrongWordsPopup() {
+        guard !incorrectWords.isEmpty else { return }
+        
+        let alert = UIAlertController(
+            title: "Practice Again?",
+            message: "Would you like to practice again with the words you got wrong?",
+            preferredStyle: .alert
+        )
+        
+        let yesAction = UIAlertAction(title: "Yes", style: .default) { _ in
+            self.navigateToPracticeVC()
+        }
+        
+        let noAction = UIAlertAction(title: "No", style: .destructive) { _ in
+            self.incorrectWords.removeAll()
+        }
+        
+        alert.addAction(yesAction)
+        alert.addAction(noAction)
+        
+        present(alert, animated: true, completion: nil)
     }
     
     private func setUpUI() {
@@ -352,5 +382,12 @@ class ScoreViewController: UIViewController {
     @objc func practiceAgainButtonTapped(){
         let practice = PracticeViewController()
         navigationController?.pushViewController(practice, animated: true)
+    }
+    
+    private func navigateToPracticeVC() {
+        let practiceVC = PracticeViewController()
+        practiceVC.incorrectWords = incorrectWords
+        practiceVC.incorrectWordsHint = incorrectWordsHint
+        navigationController?.pushViewController(practiceVC, animated: true)
     }
 }

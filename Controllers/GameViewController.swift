@@ -32,6 +32,8 @@ class GameViewController: UIViewController,UITextFieldDelegate {
     private var submitDate: String?
     var isTimerPaused: Bool = false
     private var hasHintBeenUsed = false
+    var incorrectWords: [String] = []
+    var incorrectWordsHint: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -445,6 +447,8 @@ class GameViewController: UIViewController,UITextFieldDelegate {
                     scoreVC.hintCount = self.hintCount
                     scoreVC.correctWordsCount = self.correctWords
                     scoreVC.wrongWordsCount = self.wrongWords
+                    scoreVC.incorrectWords = self.incorrectWords
+                    scoreVC.incorrectWordsHint = self.incorrectWordsHint
 
                     self.navigationController?.pushViewController(scoreVC, animated: true)
                 }
@@ -558,6 +562,8 @@ class GameViewController: UIViewController,UITextFieldDelegate {
         } else {
             wrongWords += 1
             message = "Oops! The correct spelling is \n\(currentWord)"
+            incorrectWords.append(currentWord)
+            incorrectWordsHint.append(sentences[currentIndex])
         }
         showCustomAlert(title: title, message: message)
     }
@@ -851,7 +857,7 @@ class GameViewController: UIViewController,UITextFieldDelegate {
         let tapToListenLabel = UILabel()
         tapToListenLabel.text = "Tap to Listen"
         tapToListenLabel.textColor = .white
-        tapToListenLabel.font = UIFont.systemFont(ofSize: 13)
+        tapToListenLabel.font = UIFont.systemFont(ofSize: screenWidth * 0.035)
         tapToListenLabel.textAlignment = .center
         inputTextField = PaddedTextField()
         inputTextField.attributedPlaceholder = NSAttributedString(
