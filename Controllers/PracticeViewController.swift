@@ -771,6 +771,5 @@ class PracticeViewController: UIViewController,UITextFieldDelegate {
     @objc private func hintButtonTapped() {
         hintCount += 1
         speakText(currentHint)
-        print(currentHint)
     }
 }
