@@ -200,7 +200,7 @@ class PracticeViewController: UIViewController,UITextFieldDelegate {
             words = incorrectWords
             sentences = incorrectWordsHint
             submitDate = getCurrentDate()
-    
+
             if !words.isEmpty {
                 updateCurrentWord()
                 updateProgress()
@@ -210,24 +210,24 @@ class PracticeViewController: UIViewController,UITextFieldDelegate {
         } else {
             let urlString = APIConstants.practiceApi
             guard let url = URL(string: urlString) else {
-                print("❌ Invalid URL")
+                print("Invalid URL")
                 return
             }
 
             let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
                 guard let self = self, let data = data, error == nil else {
-                    print("❌ Error fetching data: \(error?.localizedDescription ?? "Unknown error")")
+                    print("Error fetching data: \(error?.localizedDescription ?? "Unknown error")")
                     return
                 }
 
                 do {
-                    let words = try JSONDecoder().decode([String].self, from: data)
-
+                    let wordResponse = try JSONDecoder().decode(WordResponse.self, from: data)
+                    
                     DispatchQueue.main.async {
-                        self.words = words
+                        self.words = wordResponse.words.map { $0.word }
+                        self.sentences = wordResponse.words.map { $0.sentence }
                         self.submitDate = self.getCurrentDate()
                         self.currentIndex = 0
-               
 
                         if !self.words.isEmpty {
                             self.updateCurrentWord()

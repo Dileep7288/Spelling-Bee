@@ -7,3 +7,12 @@ struct SpellBeeData: Codable {
     let sentences: [String]
     let status: Bool
 }
+
+struct WordItem: Codable {
+    let word: String
+    let sentence: String
+}
+
+struct WordResponse: Codable {
+    let words: [WordItem]
+}

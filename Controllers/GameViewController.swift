@@ -409,6 +409,8 @@ class GameViewController: UIViewController,UITextFieldDelegate {
 
     private func timerFinished() {
         stopTimer()
+        incorrectWords.append(currentWord)
+        incorrectWordsHint.append(sentences[currentIndex]) 
         inputTextField.resignFirstResponder()
         showCustomAlert(title: "⏳ Time's Up!", message: "Try the next word!")
     }
