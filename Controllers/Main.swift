@@ -26,7 +26,7 @@ class Main: UIViewController {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Spelling Bee"
+        label.text = "Yelling Bee"
         label.textColor = UIColor(red: 212/255.0, green: 175/255.0, blue: 55/255.0, alpha: 1.0)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -139,7 +139,6 @@ class Main: UIViewController {
             leaderBoardButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
             leaderBoardButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.06),
         ])
-
     }
     
     @objc private func playButtonTapped() {

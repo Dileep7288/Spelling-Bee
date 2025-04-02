@@ -87,13 +87,13 @@ class PracticeViewController: UIViewController,UITextFieldDelegate {
         gradientLayer.frame = gradientView.bounds
     }
 
-     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-         return false
-     }
-
-     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-     
-     }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return false
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+    }
 
     private func setupUI() {
         let backgroundImageView = UIImageView(frame: view.bounds)
@@ -233,23 +233,23 @@ class PracticeViewController: UIViewController,UITextFieldDelegate {
                             self.updateCurrentWord()
                             self.updateProgress()
                         } else {
-                            print("⚠️ No words found in API response.")
+                            print("No words found in API response.")
                         }
                     }
                 } catch {
-                    print("❌ Error decoding JSON: \(error.localizedDescription)")
+                    print("Error decoding JSON: \(error.localizedDescription)")
                 }
             }
             task.resume()
         }
     }
-
-     private func getCurrentDate() -> String {
-         let dateFormatter = DateFormatter()
-         dateFormatter.dateFormat = "yyyy-MM-dd"
-         return dateFormatter.string(from: Date())
-     }
-
+    
+    private func getCurrentDate() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter.string(from: Date())
+    }
+    
     // MARK: - Back Button Action
     @objc private func backButtonTapped() {
         navigateToMainScreen()

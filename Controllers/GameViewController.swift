@@ -119,7 +119,7 @@ class GameViewController: UIViewController,UITextFieldDelegate {
         backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
 
         let titleLabel = UILabel()
-        titleLabel.text = "Spelling Bee"
+        titleLabel.text = "Yelling Bee"
         titleLabel.font = UIFont(name: "Poppins-Bold", size: 32)
         titleLabel.textColor = UIColor(red: 212/255.0, green: 175/255.0, blue: 55/255.0, alpha: 1.0)
         titleLabel.textAlignment = .center

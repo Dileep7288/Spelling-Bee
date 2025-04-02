@@ -79,7 +79,7 @@ class ScoreViewController: UIViewController {
         overLayView.addSubview(congratsLabel)
 
         let completionLabel = UILabel()
-        completionLabel.text = "You have completed the Spelling Bee game!"
+        completionLabel.text = "You have completed the Yelling Bee game!"
         completionLabel.font = UIFont(name: "Poppins-Regular", size: completionFontSize)
         completionLabel.textColor = .white
         completionLabel.textAlignment = .center
