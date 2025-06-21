@@ -166,7 +166,6 @@ class ScoreViewController: UIViewController {
             (UIImage(named: "7"), "Hints Used", "\(hintCount)", UIColor(red: 255/255, green: 247/255, blue: 237/255, alpha: 1.0), .orange) 
         ]
 
-
         for i in 0..<3 {
             let rowStackView = UIStackView()
             rowStackView.axis = .horizontal
